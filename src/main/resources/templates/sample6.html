@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Thymeleaf3</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+	<table border="1" th:inline="text">
+		<tr>
+			<td>MID</td>
+			<td>MNAME</td>
+			<td>REGDATE</td>
+		</tr>
+		<!-- Thymeleaf의 inlining은 기본 'text'로 지정되므로 sample4.html과 다르게 일반 태그를 작성할때도 사용할 수 있다. -->
+		<tr th:each="member : ${list}">
+			<td>[[${member.mid}]]</td>
+			<td>[[${member.mname}]]</td>
+			<td>[[${member.regdate}]]</td>
+		</tr>
+	</table>
+	<script th:inline = "javascript">
+		var result = [[${result}]];
+	</script>
+</body>
+</html>

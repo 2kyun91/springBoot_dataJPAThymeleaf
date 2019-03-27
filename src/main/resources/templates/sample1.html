@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Thymeleaf3</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<!-- 
+			Thymeleaf의 장점 중 하나는 템플릿이 기본적으로 출력할 데이터가 없는 상황에서는 HTML로 작성된 내용이 그대로 반영된다는 점이다.
+		 -->
+		<!-- <h1>Thymeleaf Test Page</h1> -->
+		<h1 th:text = "${greeting}">Thymeleaf Test Page</h1>
+	</body>
+</html>

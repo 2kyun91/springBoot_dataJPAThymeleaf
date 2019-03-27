@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Thymeleaf3</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<div th:insert="~{fragements/header :: header}"></div>
+
+	<div>
+		<ul>
+			<li><a th:href="@{http://localhost:8080/sample1}">sample1</a></li>
+			<!-- 
+				Thymeleaf를 이용하면 링크를 처리하면서 파라미터를 (이름(키) = 값)의 형태로 전달할 수 있다.
+			 -->
+			<li><a th:href="@{/sample1(p1 = 'aaa')}">sample1</a></li>
+			<li><a th:href="@{/sample1}">sample1</a></li>
+			<li><a th:href="@{~/sample1}">sample1</a></li>
+		</ul>
+	</div>
+	
+	<div th:insert="~{fragements/footer :: footer}"></div>
+</body>
+</html>
